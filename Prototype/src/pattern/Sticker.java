@@ -21,9 +21,12 @@ public class Sticker extends Prototipo{
 
 	@Override
 	public Prototipo copy() {
-		//Prendo la grandezza del prototipo
-		Sticker stickerClonato = new Sticker(this.getWidth(), this.getHeight());
-        return stickerClonato;
+		try {
+			return (Prototipo) this.clone();
+		}catch (CloneNotSupportedException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 	public void setPosition(Double x, Double y) {

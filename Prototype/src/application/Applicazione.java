@@ -44,7 +44,7 @@ public class Applicazione implements Initializable{
 			sticker.setImage(new Image("images/sticker/png/" + idImageClicked + ".png"));
 
 	    	gc = halloweenGarden.getGraphicsContext2D();
-	    	gc.drawImage(sticker.getImage(), 
+	    	gc.drawImage(sticker.getImage(),
 	    			sticker.getPosition_X(), sticker.getPosition_Y(), 
 	    			sticker.getWidth(), sticker.getHeight());
     	}
