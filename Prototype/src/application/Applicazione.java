@@ -26,7 +26,7 @@ public class Applicazione implements Initializable{
         Image image = new Image("image/giardino_halloween.jpg");
 		gc.drawImage(image, 0, 0, 800, 483);
 		
-		PROTOTIPO = new Sticker(50.0, 50.0);
+		PROTOTIPO = Sticker.creaPrototipo(50.0, 50.0);
 
 	}
 

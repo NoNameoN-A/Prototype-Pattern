@@ -12,7 +12,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			FXMLLoader app = new FXMLLoader ();
-            app.setLocation(getClass().getResource("application/Application.fxml"));
+            app.setLocation(getClass().getResource("/application/Applicazione.fxml"));
 			ScrollPane root = (ScrollPane) app.load();
 			Scene scene = new Scene (root, 800, 600);
 			

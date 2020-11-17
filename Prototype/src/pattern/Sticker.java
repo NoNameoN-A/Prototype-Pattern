@@ -4,29 +4,31 @@ import javafx.scene.image.Image;
 
 public class Sticker extends Prototipo{
 
-    private static Double WIDTH;
-    private static Double HEIGHT;
+    private Double WIDTH;
+    private Double HEIGHT;
     
-    private static Double POSITION_X;
-    private static Double POSITION_Y;
+    private Double POSITION_X;
+    private Double POSITION_Y;
     
-    private static Image IMAGE;
+    private Image IMAGE;
     
-    public Sticker(Double width, Double height) {
+    protected Sticker(Double width, Double height) {
     	this.WIDTH = width;
     	this.HEIGHT = height;
     	this.POSITION_X = 0.0;
     	this.POSITION_Y = 0.0;
 	}
+    
+    public static Sticker creaPrototipo(Double width, Double height) {
+    	Sticker s = new Sticker(width, height);
+    	s.setPosition(0.0, 0.0);
+    	
+    	return s; 
+	}
 
 	@Override
 	public Prototipo copy() {
-		try {
-			return (Prototipo) this.clone();
-		}catch (CloneNotSupportedException e) {
-			e.printStackTrace();
-		}
-		return null;
+		return this;
 	}
 
 	public void setPosition(Double x, Double y) {
