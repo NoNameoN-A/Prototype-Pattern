@@ -28,7 +28,8 @@ public class Sticker extends Prototipo{
 
 	@Override
 	public Prototipo copy() {
-		return this;
+		Sticker s = new Sticker(this.getWidth, this.getHeight);
+		return s;
 	}
 
 	public void setPosition(Double x, Double y) {
